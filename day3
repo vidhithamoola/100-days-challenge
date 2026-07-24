@@ -1,0 +1,153 @@
+# 1. Consecutive Pass Count Definition: A consecutive pass means students pass one after another without any failure in between. 
+# Task: Read marks of N students and find the longest consecutive sequence of students scoring 35 or more.
+# Example Input: 8 40 55 20 36 70 90 15 45 
+# Example Output: Longest Consecutive Passes = 3
+# n=int(input("Enter no of students:"))
+# count=0
+# count1=0
+# for i in range(1,n+1):
+#     marks=int(input(f'Enter {i} student marks:'))
+#     if marks>=35:
+#         count+=1
+#     else:
+#         if count>count1:
+#             count1=count
+#             count=0
+# if count>count1:
+#     count1=count
+# print(f'The longest consecutive passes {count1}') 
+# 2.Largest Prime Entered Definition: A prime number has exactly two positive divisors. Task: Read N numbers 
+# and print the largest prime. Example Input: 6 12 17 21 29 18 7 Example Output: Largest Prime = 29
+# num=int(input("Enter length: "))
+# high=0
+# while num>0:
+#     nums=int(input("Enter the number"))
+#     count=0
+#     for i in range(1,nums+1):
+#         if nums%i==0:
+#             count+=1
+#     if count==2:
+#         if nums>high:
+#             high=nums
+#     num-=1
+# print(high)
+#  Sum of Even Digits Definition: Even digits are 0,2,4,6,8. 
+# Task: Read a number and print the sum of even digits. Example Input: 4827316 Example Output: 20
+# n=int(input("Enter the number : "))
+# sum=0
+# while n>0:
+#     digit=n%10
+#     if digit%2==0:
+#         sum+=digit
+#     else:
+#         sum=sum
+#     n//=10
+# print(sum)
+# Factory Quality Check Definition: Quality below 50 is defective. Task: Read N scores and print defective and
+# good counts. Example Input: 6 45 6072 38 80 49 Example Output: Defective = 3 Good = 3
+# n=int(input("Enter length: "))
+# good=0
+# defective=0
+# while n>0:
+#     num=int(input("Enter the quality rate: "))
+#     if num>50:
+#         good+=1
+#     else:
+#         defective+=1
+#     n-=1
+# print(f"Good = {good}")
+# print(f"Defective = {defective}")
+# 5. Maximum Sales Increase Definition: Increase is today's sales minus yesterday's.
+# Task: Find the maximum increase between consecutive days. 
+# Example Input: 5 100 130 110 180 200
+# Example Output:  Maximum Increase = 70
+# days=int(input('Enter the days:'))
+# previous=int(input('Enter the sales:'))
+# max=0
+# for i in range(days-1):
+#     current=int(input())
+#     increase=current-previous
+#     if increase>max:
+#         max=increase
+#     previous=current
+# print(max)
+# 6.Number with Most Digits Definition:Digitcount is the number of digits. 
+# Task:Print the number with the mos tdigits. 
+# Example Input: 5 23 9876 105 123456 89 
+# Example Output:123456
+# numbers=int(input('Enter the numbers:'))
+# max_digits=0
+# answer=0
+# for i in range(1,numbers+1):
+#     num=int(input('Enter the number:'))
+#     temp=num
+#     count=0
+#     while temp>0:
+#         count+=1
+#         temp=temp//10
+#     if count>max_digits:
+#         max_digits=count
+#         answer=num
+# print(answer)
+# 7.Count Numbers Divisibleby Both 4 and 6 Definition:Suchnumbersaredivisibleby12. 
+# Task:Count such numbers. 
+# ExampleInput: 6 12 24 18 36 40 48 
+# ExampleOutput:4
+# number=int(input('Enter the number:'))
+# count=0
+# for i in range(1,number+1):
+#     num=int(input('Enter the num:'))
+#     if num%12==0:
+#         count+=1
+# print(count)
+# 8.LongestOddStreak Definition:Anoddstreakisconsecutiveoddnumbers. 
+# Task:Findthelongestoddstreak. 
+# ExampleInput: 8 3 5 8 7 9 11 4 13
+# ExampleOutput:3
+# n=int(input("Enter max number: "))
+# oddstreak = 0
+# streak = 0
+# while n>0:
+#     num=int(input("Enter a number: "))
+#     if num %2 ==1:
+#         streak +=1
+#     else:
+#         streak = 0
+#     if streak > odd_streak:
+#         oddstreak=streak
+#     n-=1
+# print(odd_streak)
+# 9. Smallest Digit Sum 
+# Definition: Digit sum is the sum of a number's digits. 
+# Task: Print the number with the smallest digit sum.  Example Input: 4  123  81  44  70 
+# Example Output: 70
+# n=int(input("Enter max numbers: "))
+# smallestdigsum = 0
+# num = int(input("Enter a number: "))
+# smallest_dig = num
+# while n>1:
+#     num = int(input("Enter a number: "))
+#     digsum = 0
+#     temp = num
+#     while temp>0:
+#         digsum+=temp%10
+#         temp//=10
+#     if digsum<smallestdigsum:
+#         smallestdigsum=digsum
+#         smallest_dig=num
+#     n-=1
+# print(smallest_dig)
+# Running Balance Definition: Running balance updates after each transaction. Task: Print 
+# balance after each transaction and final balance. Example Input: 1000 4 500-200 300-100 
+# Example Output: Balance=1500 Balance=1300 Balance=1600 Balance=1500 Final Balance=1500
+# currbalance=int(input("Enter the balance: "))
+# temp=currbalance
+# num=int(input("Enter transaction count: "))
+# sum=0
+# while num>0:
+#     trans=int(input("Enter the transaction: "))
+#     currbalance=currbalance+trans
+#     sum+=trans
+#     print(f"Balance = {currbalance}")
+#     num-=1
+# print(f"Final Balance {currbalance}")
